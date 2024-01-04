@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meetroom</title>
+  <link rel="stylesheet" href="/pages/style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+  <link rel="shortcut icon" href="/assets/icon.png">
+</head>
+<body>
+  <div id="name-enter" class="middle">
+    <div>
+      <h1>Meetroom</h1>
+      <h4>Joining&nbsp;<b id="name-enter-room" style="color: #888;"></b></h4>
+      <h2>What do you want to be called?</h2>
+      <input id="name-enter-name" class="hf" style="margin-bottom: 5px;" placeholder="Username" autofocus>
+      <br>
+      <button id="name-enter-join" class="hf">Join</button>
+    </div>
+  </div>
+  <div id="meet" hidden>
+    <div id="meet-top"></div>
+    <div id="streaming">
+      <video id="local-video" autoplay hidden></video>
+      <canvas id="local-canvas" hidden></canvas>
+      <img id="stream-img">
+      <span><b id="stream-name"></b></span>
+      <div id="streaming-bottom">
+        <button id="stream-video" class="hf">Stream Video</button>
+        <button id="share-screen" class="hf">Share Screen</button>
+        <button id="stop-video" class="hf">Stop Video</button>
+        <button id="stop-screen" class="hf">Stop Screen Share</button>
+        <button id="co-chat" class="hf">Hide Chat</button>
+      </div>
+    </div>
+    <div id="chat">
+      <div id="msg"></div>
+      <input id="chat-input" class="hf" placeholder="Type a message"><button id="chat-send" class="hf"><img src="/assets/send.png"></button>
+    </div>
+  </div>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/pages/room.js"></script>
+</body>
+</html>
