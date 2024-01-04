@@ -1,0 +1,126 @@
+* {
+  font-family: Poppins;
+}
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #222;
+  color: white;
+}
+.middle {
+  width: 100%;
+  height: 100%;
+  display: table;
+  text-align: center;
+}
+.middle > div {
+  display: table-cell;
+  vertical-align: middle;
+}
+.hf {
+  background-color: #333;
+  transition: 0.15s;
+}
+.hf:hover {
+  background-color: #444;
+}
+.hf:active {
+  background-color: #555;
+}
+.hf:focus {
+  background-color: #555;
+}
+input {
+  padding: 5px;
+  color: white;
+  outline: 0;
+  border: none;
+  border-radius: 5px;
+}
+button {
+  padding: 5px;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+a {
+  color: white;
+  text-decoration: underline;
+}
+#footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+}
+#meet-top {
+  width: 100%;
+  height: 25px;
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  transition: 0.15s;
+}
+#meet-top:hover {
+  background-color: #444;
+}
+#streaming {
+  width: 70%;
+  height: calc(100% - 55px);
+  position: fixed;
+  top: 25px;
+}
+#streaming.chat-hidden {
+  width: 100%;
+}
+#stream-img {
+  width: 100%;
+  height: 100%;
+}
+#stream-name {
+  position: fixed;
+  left: 0px;
+  top: 25px;
+}
+#streaming-bottom {
+  height: 30px;
+  position: fixed;
+  bottom: 0px;
+}
+#chat {
+  width: 30%;
+  height: calc(100% - 25px);
+  background-color: #666;
+  position: fixed;
+  right: 0px;
+  top: 25px;
+}
+#msg {
+  height: calc(100% - 40px);
+  padding: 5px;
+  overflow-y: auto;
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  white-space: -pre-wrap;
+  white-space: -o-pre-wrap;
+  word-wrap: break-word;
+}
+#chat-input {
+  width: calc(100% - 40px);
+}
+#chat-send {
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+}
+#chat-send > img {
+  width: 14px;
+  height: 14px;
+}
+#back {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+}
