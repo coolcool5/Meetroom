@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meetroom - Join meeting instantly with one streaming & chatting feature</title>
+  <link rel="stylesheet" href="/pages/style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+  <link rel="shortcut icon" href="/assets/icon.png">
+</head>
+<body class="middle">
+  <div>
+    <h1>Meetroom</h1>
+    <p style="color: #888;">Join meeting instantly with one streaming & chatting feature</p>
+    <input id="room" class="hf" placeholder="Room code" autofocus>
+    <button id="join" class="hf">Join</button>
+    <a href="/?"><button class="hf">Join Public Room</button></a>
+  </div>
+  <div id="footer">
+    <span id="copyright"></span>&nbsp;<a href="/privacy">Privacy Policy</a>&nbsp;&middot;&nbsp;<a href="/about">About</a>&nbsp;&middot;&nbsp;<a href="/dc">Developers & Credits</a>&nbsp;&middot;&nbsp;<a href="https://github.com/coolcool5/Meetroom">GitHub</a>
+  </div>
+  <script>
+    const join = document.getElementById("join");
+    const room = document.getElementById("room");
+    room.addEventListener("keydown", (e) => {
+      if (e.key == "Enter") {
+        join.click();
+      }
+    });
+    join.onclick = () => {
+      if (room.value != "") {
+        location.href = `/?${room.value}`;
+      }
+    };
+    document.getElementById("copyright").innerHTML = `© ${new Date().getFullYear()} Meetroom. All Rights Reserved.`;
+  </script>
+  </script>
+</body>
+</html>
